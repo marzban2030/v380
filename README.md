@@ -30,8 +30,8 @@ The http server can be found here: https://gist.github.com/misaelnieto/2409785
 `./v380 -p password -mac 11:22:33:aa:bb:cc | gst-launch-1.0 -v fdsrc ! decodebin ! jpegenc ! multipartmux boundary=spionisto ! tcpclientsink host=127.0.0.1 port=9999
 `
 
-### Save to MP4 video file with certain duration and valid name
-`timeout 1m ./v380 -u admin -p password -port 8800 -id 123456 -addr 192.168.1.1 > VID_$(date +'%Y%m%d_%H%M%S').mp4`
+### Save to video file with certain duration and valid name
+`timeout 1m ./v380 -u admin -p password -port 8800 -id 123456 -addr 192.168.1.1 > VID_$(date +'%Y%m%d_%H%M%S').avi`
 ### The camera can be discovered by using `--discover` command
 `v380 --discover`
 

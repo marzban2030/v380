@@ -37,3 +37,10 @@ The http server can be found here: https://gist.github.com/misaelnieto/2409785
 
 # Compiling
 Use Visual Studio 2015 or on linux use `make` under v380 subdirectory
+
+Cross compiling for armv5:
+(Dynamically linked v380 binary for armv5tej architecture)
+
+Building: Install required package arm-linux-gnueabi-g++ compiler with `apt install g++-arm-linux-gnueabi` command, Then replace `Makefile` in v380 subdirectory with this one in realeses and run `make` command to building dynamically linked v380 binary for armv5tej architecture. If you want to building statically linked v380 binary edit `Makefile` and add `-static` switch to Line 2 after `-lpthread` switch
+
+Executing: Copy shard libraries to `/lib` or binary v380 working directory, In case if you copy shared libraries to binary v380 working directory then run `./ld-linux.so.3 --library-path . ./v380` to executing 
